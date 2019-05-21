@@ -1,2 +1,1 @@
-# shark_bait
-Shark Bait!
+# SHARK BAIT
