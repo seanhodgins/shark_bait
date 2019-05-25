@@ -1,0 +1,389 @@
+EESchema Schematic File Version 4
+LIBS:rotary_pcb_remote-cache
+EELAYER 29 0
+EELAYER END
+$Descr A4 11693 8268
+encoding utf-8
+Sheet 1 1
+Title ""
+Date "sam. 04 avril 2015"
+Rev ""
+Comp ""
+Comment1 ""
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+$Comp
+L rotary_pcb_remote-rescue:Conn_01x11-Connector_Generic J6
+U 1 1 5CE6B37B
+P 3300 3350
+F 0 "J6" H 3380 3392 50  0000 L CNN
+F 1 "FLOW" H 3380 3301 50  0000 L CNN
+F 2 "Connector_JST:JST_PH_B11B-PH-K_1x11_P2.00mm_Vertical" H 3300 3350 50  0001 C CNN
+F 3 "~" H 3300 3350 50  0001 C CNN
+	1    3300 3350
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3100 3850 3000 3850
+Wire Wire Line
+	3000 3850 3000 3900
+$Comp
+L AP2112k:GND #PWR0119
+U 1 1 5CE82D7C
+P 3000 3900
+F 0 "#PWR0119" H 3000 3650 50  0001 C CNN
+F 1 "GND" H 3000 3750 50  0000 C CNN
+F 2 "" H 3000 3900 50  0000 C CNN
+F 3 "" H 3000 3900 50  0000 C CNN
+	1    3000 3900
+	1    0    0    -1  
+$EndComp
+$Comp
+L rotary_pcb_remote-rescue:SW_Rotary10-Switch SW3
+U 1 1 5CE4AB87
+P 2200 3400
+F 0 "SW3" H 2100 4269 50  0000 C CNN
+F 1 "SW_Rotary10" H 2100 4178 50  0000 C CNN
+F 2 "project_footprints:Rotary10_CK_MA00L1NCGF" H 2000 4100 50  0001 C CNN
+F 3 "http://cdn-reichelt.de/documents/datenblatt/C200/DS-Serie%23LOR.pdf" H 2000 4100 50  0001 C CNN
+F 4 "CKN11881-ND" H 2100 4087 50  0000 C CNN "Digikey Part No."
+	1    2200 3400
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	2600 2800 3100 2800
+Wire Wire Line
+	3100 2800 3100 2850
+Wire Wire Line
+	2600 2900 3100 2900
+Wire Wire Line
+	3100 2900 3100 2950
+Wire Wire Line
+	2600 3000 3100 3000
+Wire Wire Line
+	3100 3000 3100 3050
+Wire Wire Line
+	2600 3100 3100 3100
+Wire Wire Line
+	3100 3100 3100 3150
+Wire Wire Line
+	2600 3200 3100 3200
+Wire Wire Line
+	3100 3200 3100 3250
+Wire Wire Line
+	2600 3300 3100 3300
+Wire Wire Line
+	3100 3300 3100 3350
+Wire Wire Line
+	2600 3500 3100 3500
+Wire Wire Line
+	3100 3500 3100 3450
+Wire Wire Line
+	2600 3600 3100 3600
+Wire Wire Line
+	3100 3600 3100 3550
+Wire Wire Line
+	2600 3700 3100 3700
+Wire Wire Line
+	3100 3700 3100 3650
+Wire Wire Line
+	2600 3800 3100 3800
+Wire Wire Line
+	3100 3800 3100 3750
+Wire Wire Line
+	1600 3400 1500 3400
+Wire Wire Line
+	1500 3400 1500 3500
+$Comp
+L AP2112k:GND #PWR0103
+U 1 1 5CE51F1B
+P 1500 3500
+F 0 "#PWR0103" H 1500 3250 50  0001 C CNN
+F 1 "GND" H 1500 3350 50  0000 C CNN
+F 2 "" H 1500 3500 50  0000 C CNN
+F 3 "" H 1500 3500 50  0000 C CNN
+	1    1500 3500
+	1    0    0    -1  
+$EndComp
+$Comp
+L rotary_pcb_remote-rescue:Conn_01x11-Connector_Generic J1
+U 1 1 5CE740A3
+P 5500 3350
+F 0 "J1" H 5580 3392 50  0000 L CNN
+F 1 "FLOW" H 5580 3301 50  0000 L CNN
+F 2 "Connector_JST:JST_PH_B11B-PH-K_1x11_P2.00mm_Vertical" H 5500 3350 50  0001 C CNN
+F 3 "~" H 5500 3350 50  0001 C CNN
+	1    5500 3350
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5300 3850 5200 3850
+Wire Wire Line
+	5200 3850 5200 3900
+$Comp
+L AP2112k:GND #PWR0101
+U 1 1 5CE740AB
+P 5200 3900
+F 0 "#PWR0101" H 5200 3650 50  0001 C CNN
+F 1 "GND" H 5200 3750 50  0000 C CNN
+F 2 "" H 5200 3900 50  0000 C CNN
+F 3 "" H 5200 3900 50  0000 C CNN
+	1    5200 3900
+	1    0    0    -1  
+$EndComp
+$Comp
+L rotary_pcb_remote-rescue:SW_Rotary10-Switch SW1
+U 1 1 5CE740B2
+P 4400 3400
+F 0 "SW1" H 4300 4269 50  0000 C CNN
+F 1 "SW_Rotary10" H 4300 4178 50  0000 C CNN
+F 2 "project_footprints:Rotary10_CK_MA00L1NCGF" H 4200 4100 50  0001 C CNN
+F 3 "http://cdn-reichelt.de/documents/datenblatt/C200/DS-Serie%23LOR.pdf" H 4200 4100 50  0001 C CNN
+F 4 "CKN11881-ND" H 4300 4087 50  0000 C CNN "Digikey Part No."
+	1    4400 3400
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4800 2800 5300 2800
+Wire Wire Line
+	5300 2800 5300 2850
+Wire Wire Line
+	4800 2900 5300 2900
+Wire Wire Line
+	5300 2900 5300 2950
+Wire Wire Line
+	4800 3000 5300 3000
+Wire Wire Line
+	5300 3000 5300 3050
+Wire Wire Line
+	4800 3100 5300 3100
+Wire Wire Line
+	5300 3100 5300 3150
+Wire Wire Line
+	4800 3200 5300 3200
+Wire Wire Line
+	5300 3200 5300 3250
+Wire Wire Line
+	4800 3300 5300 3300
+Wire Wire Line
+	5300 3300 5300 3350
+Wire Wire Line
+	4800 3500 5300 3500
+Wire Wire Line
+	5300 3500 5300 3450
+Wire Wire Line
+	4800 3600 5300 3600
+Wire Wire Line
+	5300 3600 5300 3550
+Wire Wire Line
+	4800 3700 5300 3700
+Wire Wire Line
+	5300 3700 5300 3650
+Wire Wire Line
+	4800 3800 5300 3800
+Wire Wire Line
+	5300 3800 5300 3750
+Wire Wire Line
+	3800 3400 3700 3400
+Wire Wire Line
+	3700 3400 3700 3500
+$Comp
+L AP2112k:GND #PWR0102
+U 1 1 5CE740CE
+P 3700 3500
+F 0 "#PWR0102" H 3700 3250 50  0001 C CNN
+F 1 "GND" H 3700 3350 50  0000 C CNN
+F 2 "" H 3700 3500 50  0000 C CNN
+F 3 "" H 3700 3500 50  0000 C CNN
+	1    3700 3500
+	1    0    0    -1  
+$EndComp
+$Comp
+L rotary_pcb_remote-rescue:Conn_01x11-Connector_Generic J2
+U 1 1 5CE79C5E
+P 7800 3350
+F 0 "J2" H 7880 3392 50  0000 L CNN
+F 1 "FLOW" H 7880 3301 50  0000 L CNN
+F 2 "Connector_JST:JST_PH_B11B-PH-K_1x11_P2.00mm_Vertical" H 7800 3350 50  0001 C CNN
+F 3 "~" H 7800 3350 50  0001 C CNN
+	1    7800 3350
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	7600 3850 7500 3850
+Wire Wire Line
+	7500 3850 7500 3900
+$Comp
+L AP2112k:GND #PWR0104
+U 1 1 5CE79C6A
+P 7500 3900
+F 0 "#PWR0104" H 7500 3650 50  0001 C CNN
+F 1 "GND" H 7500 3750 50  0000 C CNN
+F 2 "" H 7500 3900 50  0000 C CNN
+F 3 "" H 7500 3900 50  0000 C CNN
+	1    7500 3900
+	1    0    0    -1  
+$EndComp
+$Comp
+L rotary_pcb_remote-rescue:SW_Rotary10-Switch SW2
+U 1 1 5CE79C75
+P 6700 3400
+F 0 "SW2" H 6600 4269 50  0000 C CNN
+F 1 "SW_Rotary10" H 6600 4178 50  0000 C CNN
+F 2 "project_footprints:Rotary10_CK_MA00L1NCGF" H 6500 4100 50  0001 C CNN
+F 3 "http://cdn-reichelt.de/documents/datenblatt/C200/DS-Serie%23LOR.pdf" H 6500 4100 50  0001 C CNN
+F 4 "CKN11881-ND" H 6600 4087 50  0000 C CNN "Digikey Part No."
+	1    6700 3400
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	7100 2800 7600 2800
+Wire Wire Line
+	7600 2800 7600 2850
+Wire Wire Line
+	7100 2900 7600 2900
+Wire Wire Line
+	7600 2900 7600 2950
+Wire Wire Line
+	7100 3000 7600 3000
+Wire Wire Line
+	7600 3000 7600 3050
+Wire Wire Line
+	7100 3100 7600 3100
+Wire Wire Line
+	7600 3100 7600 3150
+Wire Wire Line
+	7100 3200 7600 3200
+Wire Wire Line
+	7600 3200 7600 3250
+Wire Wire Line
+	7100 3300 7600 3300
+Wire Wire Line
+	7600 3300 7600 3350
+Wire Wire Line
+	7100 3500 7600 3500
+Wire Wire Line
+	7600 3500 7600 3450
+Wire Wire Line
+	7100 3600 7600 3600
+Wire Wire Line
+	7600 3600 7600 3550
+Wire Wire Line
+	7100 3700 7600 3700
+Wire Wire Line
+	7600 3700 7600 3650
+Wire Wire Line
+	7100 3800 7600 3800
+Wire Wire Line
+	7600 3800 7600 3750
+Wire Wire Line
+	6100 3400 6000 3400
+Wire Wire Line
+	6000 3400 6000 3500
+$Comp
+L AP2112k:GND #PWR0105
+U 1 1 5CE79C95
+P 6000 3500
+F 0 "#PWR0105" H 6000 3250 50  0001 C CNN
+F 1 "GND" H 6000 3350 50  0000 C CNN
+F 2 "" H 6000 3500 50  0000 C CNN
+F 3 "" H 6000 3500 50  0000 C CNN
+	1    6000 3500
+	1    0    0    -1  
+$EndComp
+$Comp
+L rotary_pcb_remote-rescue:Conn_01x11-Connector_Generic J3
+U 1 1 5CE79C9F
+P 10000 3350
+F 0 "J3" H 10080 3392 50  0000 L CNN
+F 1 "FLOW" H 10080 3301 50  0000 L CNN
+F 2 "Connector_JST:JST_PH_B11B-PH-K_1x11_P2.00mm_Vertical" H 10000 3350 50  0001 C CNN
+F 3 "~" H 10000 3350 50  0001 C CNN
+	1    10000 3350
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	9800 3850 9700 3850
+Wire Wire Line
+	9700 3850 9700 3900
+$Comp
+L AP2112k:GND #PWR0106
+U 1 1 5CE79CAB
+P 9700 3900
+F 0 "#PWR0106" H 9700 3650 50  0001 C CNN
+F 1 "GND" H 9700 3750 50  0000 C CNN
+F 2 "" H 9700 3900 50  0000 C CNN
+F 3 "" H 9700 3900 50  0000 C CNN
+	1    9700 3900
+	1    0    0    -1  
+$EndComp
+$Comp
+L rotary_pcb_remote-rescue:SW_Rotary10-Switch SW4
+U 1 1 5CE79CB6
+P 8900 3400
+F 0 "SW4" H 8800 4269 50  0000 C CNN
+F 1 "SW_Rotary10" H 8800 4178 50  0000 C CNN
+F 2 "project_footprints:Rotary10_CK_MA00L1NCGF" H 8700 4100 50  0001 C CNN
+F 3 "http://cdn-reichelt.de/documents/datenblatt/C200/DS-Serie%23LOR.pdf" H 8700 4100 50  0001 C CNN
+F 4 "CKN11881-ND" H 8800 4087 50  0000 C CNN "Digikey Part No."
+	1    8900 3400
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	9300 2800 9800 2800
+Wire Wire Line
+	9800 2800 9800 2850
+Wire Wire Line
+	9300 2900 9800 2900
+Wire Wire Line
+	9800 2900 9800 2950
+Wire Wire Line
+	9300 3000 9800 3000
+Wire Wire Line
+	9800 3000 9800 3050
+Wire Wire Line
+	9300 3100 9800 3100
+Wire Wire Line
+	9800 3100 9800 3150
+Wire Wire Line
+	9300 3200 9800 3200
+Wire Wire Line
+	9800 3200 9800 3250
+Wire Wire Line
+	9300 3300 9800 3300
+Wire Wire Line
+	9800 3300 9800 3350
+Wire Wire Line
+	9300 3500 9800 3500
+Wire Wire Line
+	9800 3500 9800 3450
+Wire Wire Line
+	9300 3600 9800 3600
+Wire Wire Line
+	9800 3600 9800 3550
+Wire Wire Line
+	9300 3700 9800 3700
+Wire Wire Line
+	9800 3700 9800 3650
+Wire Wire Line
+	9300 3800 9800 3800
+Wire Wire Line
+	9800 3800 9800 3750
+Wire Wire Line
+	8300 3400 8200 3400
+Wire Wire Line
+	8200 3400 8200 3500
+$Comp
+L AP2112k:GND #PWR0107
+U 1 1 5CE79CD6
+P 8200 3500
+F 0 "#PWR0107" H 8200 3250 50  0001 C CNN
+F 1 "GND" H 8200 3350 50  0000 C CNN
+F 2 "" H 8200 3500 50  0000 C CNN
+F 3 "" H 8200 3500 50  0000 C CNN
+	1    8200 3500
+	1    0    0    -1  
+$EndComp
+$EndSCHEMATC
