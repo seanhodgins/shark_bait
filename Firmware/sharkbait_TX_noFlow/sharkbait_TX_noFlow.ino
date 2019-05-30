@@ -22,11 +22,12 @@
 #define RFM95_INT 3
 #endif
 
-#define TESTKNOB
+
 #define BUTT1 9
 
-int s[4] = {14, 15, 16, 17};
-int b[4] = {18, 19, 0, 1};
+int s[4] = {A0, A1, A2, A3};
+int com = 6;
+int b[4] = {1, 0, A5, A4};
 
 int sLED[4] = {20, 21, 5, 6};
 int tLED[4] = {10, 11, 12, 13};
@@ -46,40 +47,28 @@ void setup()
 {
   pinMode(RFM95_RST, OUTPUT);
   digitalWrite(RFM95_RST, HIGH);
-  pinMode(BUTT1, INPUT);
+  pinMode(BUTT1, INPUT_PULLUP);
   //pinMode(8, OUTPUT);
 
-  for (int y = 0; y < 3; y++) {
+  for (int y = 0; y < 4; y++) {
     pinMode(sLED[y], OUTPUT);
     pinMode(tLED[y], OUTPUT);
     digitalWrite(sLED[y], HIGH);
     digitalWrite(tLED[y], HIGH);
-    pinMode(b[y], INPUT);
-    pinMode(s[y], OUTPUT);
-    digitalWrite(s[y], LOW);
     delay(300);
   }
   delay(1000);
-  for (int j = 0; j < 3; j++) {
+  for (int j = 0; j < 4; j++) {
     digitalWrite(sLED[j], LOW);
     digitalWrite(tLED[j], LOW);
+    delay(100);
   }
 
   Serial.begin(115200);
   //while (!Serial) {
   //  delay(1);
   //}
-#ifdef TESTKNOB
-  int lasttestflow = 0;
-  while (1) {
-    int testflow = checkFlow(0);
-    if (lasttestflow != testflow) {
-      Serial.println(testflow);
-      lasttestflow = testflow;
-    }
-    delay(100);
-  }
-#endif
+
   delay(100);
 
   Serial.println("Feather LoRa TX Test!");
@@ -119,9 +108,11 @@ void loop()
   state = !(digitalRead(BUTT1));
   while (x < 4) {
     state = !(digitalRead(BUTT1));
-    digitalWrite(13, state);
+
     int flow = checkFlow(x);
+    digitalWrite(tLED[x], HIGH);
     transmitBait(x, state, flow);
+    digitalWrite(tLED[x], LOW);
     delay(400); // Wait 1 second between transmits, could also 'sleep' here!
     x++;
   }
@@ -132,13 +123,13 @@ void loop()
 //Sends to the bait number (0-3), selects the state (0/off 1/on), selects flow setting (0-9)
 
 void transmitBait(int baitnum, int state, int flow) {
-  digitalWrite(13, HIGH);
+  digitalWrite(tLED[baitnum], HIGH);
   Serial.println("Transmitting..."); // Send a message to rf95_server
   String sendStr = String(baitnum);
   sendStr += ",";
   sendStr += String(state);
   sendStr += ",";
-  sendStr += String(flow);
+  sendStr += String(' ');
   Serial.print("Sending "); Serial.println(sendStr);
   char sendBuf[6];
   sendStr.toCharArray(sendBuf, 6);
@@ -157,10 +148,12 @@ void transmitBait(int baitnum, int state, int flow) {
   Serial.println("Waiting for reply...");
   if (rf95.waitAvailableTimeout(400))
   {
+
     // Should be a reply message for us now
     if (rf95.recv(buf, &len))
     {
-      digitalWrite(tLED[baitnum], HIGH);
+      digitalWrite(sLED[baitnum], HIGH);
+      delay(100);
       Serial.print("Got reply: ");
       Serial.println((char*)buf);
       state = buf[2] - 48;
@@ -179,8 +172,9 @@ void transmitBait(int baitnum, int state, int flow) {
   else
   {
     Serial.println("No reply, is there a listener around?");
+    digitalWrite(sLED[baitnum], LOW);
   }
-  digitalWrite(13, LOW);
+
 
 
 
@@ -193,20 +187,20 @@ byte checkMuxPin(int pin, int bank) {
     //Serial.print(state);
   }
   //Serial.print(",");
-  //Serial.println(pin);
+  // Serial.println(pin);
   byte check = digitalRead(bank);
   return check;
 }
 
 int checkFlow(int bait) {
-  int setting = 0;
-  for (int i = 0; i < 10; i++) {
-    byte val = checkMuxPin(i, b[bait]);
-    if (val == 0) {
-      setting = i;
-    }
-  }
-  //Serial.print("Flow Setting: ");
-  //Serial.println(setting);
+  int setting = -1;
+  //for (int i = 0; i < 10; i++) {
+  //  byte val = checkMuxPin(i, b[bait]);
+  //  if (val == 0) {
+  //    setting = i;
+  //  }
+  //}
+  Serial.print("Flow Setting: ");
+  Serial.println(setting);
   return setting;
 }
